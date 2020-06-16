@@ -1,5 +1,7 @@
 package utils;
 
+import java.util.*;
+
 public class Utils {
 
     public static void printDP(int[][] dp) {
@@ -14,6 +16,24 @@ public class Utils {
             System.out.println();
         }
         System.out.println("---------------------------");
+    }
+
+    public static void printTreeNode(TreeNode root) {
+        if (root == null) {
+            System.out.println("");
+        }
+        List<String> list = new ArrayList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            TreeNode cur = queue.poll();
+            if (cur != null) {
+                list.add(String.valueOf(cur.val));
+                queue.add(cur.left);
+                queue.add(cur.right);
+            }
+        }
+        System.out.println(Arrays.toString(list.toArray()));
     }
 
 }
