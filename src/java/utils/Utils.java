@@ -36,4 +36,13 @@ public class Utils {
         System.out.println(Arrays.toString(list.toArray()));
     }
 
+    public static TreeNode buildTreeNode(Object val) {
+        val = String.valueOf(val).replaceAll(",", "")
+                .replace("[", "")
+                .replace("]", "")
+                .replaceAll(" ", "");
+        TreeNode node = new TreeNode(Integer.valueOf(String.valueOf(val)));
+        return node;
+    }
+
 }
