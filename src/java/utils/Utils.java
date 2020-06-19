@@ -18,6 +18,14 @@ public class Utils {
         System.out.println("---------------------------");
     }
 
+    public static void printList(ListNode head) {
+        while (head != null) {
+            System.out.print(head.val + "-->");
+            head = head.next;
+        }
+        System.out.println("null");
+    }
+
     public static void printTreeNode(TreeNode root) {
         if (root == null) {
             System.out.println("");
