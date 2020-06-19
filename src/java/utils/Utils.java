@@ -4,6 +4,23 @@ import java.util.*;
 
 public class Utils {
 
+    public static ListNode buildRandomList(int len) {
+        int size = len;
+        if (size == 0) {
+            return null;
+        }
+        size--;
+        ListNode head = new ListNode((int) (new Random().nextInt(9)));
+        ListNode pre = head;
+        while (size != 0) {
+            ListNode cur = new ListNode((int) (new Random().nextInt(9)));
+            pre.next = cur;
+            pre = cur;
+            size--;
+        }
+        return head;
+    }
+
     public static void printDP(int[][] dp) {
         int m = dp.length;
         int n = dp[0].length;
