@@ -70,4 +70,22 @@ public class Utils {
         return node;
     }
 
+    public static ListNode buildListNode(int n) {
+        if (n == 0) {
+            return null;
+        }
+        ListNode head = new ListNode(0);
+        ListNode root = head;
+        for (int i = 1; i < n; i++) {
+            ListNode node = new ListNode(i);
+            head.next = node;
+            head = head.next;
+        }
+        return root;
+    }
+
+    public static void main(String[] args) {
+        ListNode root = buildListNode(5);
+        printList(root);
+    }
 }
