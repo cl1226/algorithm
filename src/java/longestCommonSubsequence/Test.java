@@ -23,8 +23,8 @@ public class Test {
     }
 
     public static void main(String[] args) {
-        String s1 = "abc";
-        String s2 = "def";
+        String s1 = "01111";
+        String s2 = "10101";
         int process = process(s1.toCharArray(), s2.toCharArray());
         System.out.println(process);
     }

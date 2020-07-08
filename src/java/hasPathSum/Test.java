@@ -30,7 +30,6 @@ public class Test {
         root.right.right.right = new TreeNode(1);
 //        TreeNode root = new TreeNode(1);
 //        root.left = new TreeNode(2);
-
         int sum = 22;
 
         if (root == null) {
