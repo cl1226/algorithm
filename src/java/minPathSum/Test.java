@@ -4,6 +4,7 @@ import utils.Utils;
 
 public class Test {
 
+    // 递归求最小值
     public static int process(int[][] grid, int m, int n, int x, int y) {
         if (x == m - 1 && y == n - 1) {
             return grid[x][y];
@@ -19,6 +20,7 @@ public class Test {
                 grid[x][y] + process(grid, m, n, x+1, y));
     }
 
+    // 递归转动态规划，注意边界条件
     public static int dp(int[][] grid, int m, int n) {
         int[][] dp = new int[m][n];
         dp[m-1][n-1] = grid[m-1][n-1];
